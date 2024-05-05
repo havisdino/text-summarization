@@ -45,7 +45,7 @@ scaler.load_state_dict(checkpoint['scaler'])
 optimizer.load_state_dict(checkpoint['optimizer'])
 
 if args.traindata.endswith('.csv'):
-    traindata = CSVTextDataset(args.traindata, C.MAXLEN + 1, tokenizer, limit=C.TRAIN_LIMIT)
+    traindata = CSVTextDataset(args.traindata, C.MAXLEN + 1, tokenizer, limit=C.TRAIN_LIMIT, n_overlap=C.N_OVERLAP)
     if args.valdata is not None:
         valdata = CSVTextDataset(args.valdata, C.MAXLEN + 1, tokenizer, limit=C.VAL_LIMIT)
 elif args.traindata.endswith('.bds'):

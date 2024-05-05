@@ -27,6 +27,7 @@ CHECKPOINT_RETENTION = 2
 
 
 # ---------- Data settings ----------
+N_OVERLAP = 64
 END_TOKEN_ID = 29998
 SUM_TOKEN_ID = 29999
 TOKENIZER_PATH = 'tokenizer/byte-level-bpe-tinystories.json'
