@@ -1,1 +1,1 @@
-# LoRA fine-tuning simple-LLM using for text summarization
+# LoRA fine-tuning simple-LLM for text summarization
