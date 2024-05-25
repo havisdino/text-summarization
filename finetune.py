@@ -42,7 +42,7 @@ scaler = torch.cuda.amp.GradScaler()
 optimizer = torch.optim.AdamW(model.parameters(), lr=C.LEARNING_RATE)
 
 scaler.load_state_dict(checkpoint['scaler'])
-optimizer.load_state_dict(checkpoint['optimizer'])
+# optimizer.load_state_dict(checkpoint['optimizer'])
 
 if args.traindata.endswith('.csv'):
     traindata = CSVTextDataset(args.traindata, C.MAXLEN + 1, tokenizer, limit=C.TRAIN_LIMIT, n_overlap=C.N_OVERLAP)
